@@ -1,0 +1,1 @@
+export const RENDER_API_ENDPOINT = 'https://it-jobs-api-9kxz.onrender.com'
