@@ -1,0 +1,60 @@
+const popularCountries = [
+    { name: 'Argentina', code: 'AR' },
+    { name: 'Australia', code: 'AU' },
+    { name: 'Austria', code: 'AT' },
+    { name: 'Belgium', code: 'BE' },
+    { name: 'Brazil', code: 'BR' },
+    { name: 'Canada', code: 'CA' },
+    { name: 'Chile', code: 'CL' },
+    { name: 'China', code: 'CN' },
+    { name: 'Colombia', code: 'CO' },
+    { name: 'Czech Republic', code: 'CZ' },
+    { name: 'Denmark', code: 'DK' },
+    { name: 'Egypt', code: 'EG' },
+    { name: 'Finland', code: 'FI' },
+    { name: 'France', code: 'FR' },
+    { name: 'Germany', code: 'DE' },
+    { name: 'Greece', code: 'GR' },
+    { name: 'Hong Kong', code: 'HK' },
+    { name: 'Hungary', code: 'HU' },
+    { name: 'India', code: 'IN' },
+    { name: 'Indonesia', code: 'ID' },
+    { name: 'Ireland', code: 'IE' },
+    { name: 'Israel', code: 'IL' },
+    { name: 'Italy', code: 'IT' },
+    { name: 'Japan', code: 'JP' },
+    { name: 'Malaysia', code: 'MY' },
+    { name: 'Mexico', code: 'MX' },
+    { name: 'Netherlands', code: 'NL' },
+    { name: 'New Zealand', code: 'NZ' },
+    { name: 'Nigeria', code: 'NG' },
+    { name: 'Norway', code: 'NO' },
+    { name: 'Philippines', code: 'PH' },
+    { name: 'Poland', code: 'PL' },
+    { name: 'Portugal', code: 'PT' },
+    { name: 'Russia', code: 'RU' },
+    { name: 'Saudi Arabia', code: 'SA' },
+    { name: 'Singapore', code: 'SG' },
+    { name: 'South Africa', code: 'ZA' },
+    { name: 'South Korea', code: 'KR' },
+    { name: 'Spain', code: 'ES' },
+    { name: 'Sweden', code: 'SE' },
+    { name: 'Switzerland zip', code: 'CH' },
+    { name: 'Taiwan', code: 'TW' },
+    { name: 'Thailand', code: 'TH' },
+    { name: 'Turkey', code: 'TR' },
+    { name: 'Ukraine', code: 'UA' },
+    { name: 'United Arab Emirates', code: 'AE' },
+    { name: 'United Kingdom', code: 'GB' },
+    { name: 'United States', code: 'US' },
+    { name: 'Vietnam', code: 'VN' },
+  ];
+  
+  // Hàm lấy mã quốc gia từ tên quốc gia
+ export const getCountryCode = (countryName) => {
+    if (!countryName) return '';
+    const country = popularCountries.find(
+      (c) => c.name.toLowerCase() === countryName.toLowerCase()
+    );
+    return country ? country.code.toLowerCase() : '';
+  };
